@@ -1,7 +1,6 @@
 import React,{useState,useRef} from 'react';
 import Navbar1 from './Navbar1';
 import { Alert } from "reactstrap";
-import './Signup.css';
 
 export default function Home(){
     const [visible, setVisible] = useState(false);
