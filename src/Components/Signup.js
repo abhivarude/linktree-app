@@ -47,7 +47,7 @@ export default function Home(){
         //     body: JSON.stringify(postData)
         // })
         
-        let resp=await axios.post("http://localhost:5800/signup",{userName:name, email:email,password:pass})
+        let resp=await axios.post("https://linktree-backend-main.herokuapp.com/signup",{userName:name, email:email,password:pass})
  console.log(resp.status);
  if(resp.status === 201){
     setVisible2(true);   
