@@ -181,7 +181,7 @@ export default function UserDash(props) {
           </div>
           
           <div className="col-12 col-md-4 col-lg-4 mt-2 mb-2 p-1 ">
-           <div className="p-2" style={{borderBottom:"1px solid black"}}>My Linktree(Share this url):<a href={"https://linktree-frontend-main.herokuapp.com/Tree/"+props.match.params.name}>{" https://linktree-frontend-main.herokuapp.com/Tree/" +props.match.params.name}</a></div>
+           <div className="p-2" style={{borderBottom:"1px solid black"}}>My Linktree(Share this url):<a href={"https://linktree-frontend-main.herokuapp.com/Tree/"+props.match.params.name}>{"https://linktree-frontend-main.herokuapp.com/Tree/" +props.match.params.name}</a></div>
             <div className="Preview flex-grow-1 offset-3 col-6 ">
               <img
                 src="https://cdn2.iconfinder.com/data/icons/business-hr-and-recruitment/100/account_blank_face_dummy_human_mannequin_profile_user_-512.png"
