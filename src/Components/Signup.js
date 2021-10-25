@@ -1,7 +1,7 @@
 import React,{useState,useRef} from 'react';
 import Navbar1 from './Navbar1';
 import { Alert } from "reactstrap";
-
+import axios from "axios";
 export default function Home(){
     const [visible, setVisible] = useState(false);
     const [visible1, setVisible1] = useState(false);
@@ -37,23 +37,28 @@ export default function Home(){
            password:pass,
            status:false
         }
-        let resp = await fetch(url,{
-            method:"POST",
-            mode:'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            referrerPolicy: 'no-referrer',
-            body: JSON.stringify(postData)
-        })
-        console.log(resp.status);
+        // let resp = await fetch(url,{
+        //     method:"POST",
+        //     mode:'cors',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     referrerPolicy: 'no-referrer',
+        //     body: JSON.stringify(postData)
+        // })
+        
+        let resp=await axios.post("http://localhost:5800/signup",{userName:name, email:email,password:pass})
+ console.log(resp.status);
+ if(resp.status === 201){
+    setVisible2(true);   
+}
         if(resp.status === 200){
             setVisible1(true);
         }     
-        else if(resp.status === 422){
+         if(resp.status === 422){
             setVisible3(true);
         }
-        else if(resp.status === 400){
+         if(resp.status === 400){
             setVisible2(true);   
         }
         setLoading(false)

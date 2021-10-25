@@ -62,7 +62,7 @@ function App() {
         <Route exact path="/pass-reset/:id" component={AcceptPass}/>
         <Route exact path="/reset-password" component={ResetPass}/>
         <Route exact path="/activation/:email" component={Activation}/>
-        <ProtectedRoute exact path="/tree/:name" component={Tree}/>
+        <Route exact path="/tree/:name" component={Tree}/>
         <ProtectedRoute exact path="/dashboard/:name" component={UserDash}/>        
         <ProtectedRoute exact path="/profile/:name" component={Profile}/>
       </Switch>   
